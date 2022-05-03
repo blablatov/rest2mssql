@@ -8,14 +8,16 @@ Webserver-parser модуль rest-запросов.
 
 Схема обмена данными:
 
-> REST(imitation from web browser) <---> web-server_URL-parser/rest2mssql <---> MSSQL/mssqlinsert
+> REST(imitation from web browser) <---> web-server_URL-parser/rest2mssql/mssqldsn <---> MSSQL/mssqlinsert
 
 Для проверки запустить сервер rest2mssql из строки браузера и создать запрос типа:
 
 	http://localhost:8080/DirectumRX.dbo.Integration_Data:DirectumRXTest.dbo.Integration_Data
 
 > где
+> 
 > DirectumRX.dbo.Integration_Data -- имя БД донора
+> 
 > DirectumRXTest.dbo.Integration_Data -- имя БД реципиента
 
 ## On English
@@ -27,12 +29,14 @@ We can see tests modules for exchange data.
 
 Communication scheme:
 
-> REST(imitation from web browser) <---> web-server_URL-parser/rest2mssql <---> MSSQL/mssqlinsert
+> REST(imitation from web browser) <---> web-server_URL-parser/rest2mssql/mssqldsn <---> MSSQL/mssqlinsert
 
 To check, start the rest2mssql server from the browser line and create a query like:
 
 	http://localhost:8080/DirectumRX.dbo.Integration_Data:DirectumRXTest.dbo.Integration_Data
 	
 where
+
 > DirectumRX.dbo.Integration_Data -- donor database name
+> 
 > DirectumRXTest.dbo.Integration_Data -- recipient database name
