@@ -34,8 +34,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	sd.dBaseTo = r.URL.Path[i+1:]                            // get slice of string after symbol ":"
 	fmt.Println("\nБД донор:", sd.dBaseFrom, "\nБД реципиент:", sd.dBaseTo)
 
-	insertIntegrTableSql := "INSERT " + sd.dBaseFrom + " SELECT Id, Discriminator, Name," +
-		"BusinessUnit, ItemNumber, ItemName FROM " + sd.dBaseTo + " WHERE BusinessUnit = 65"
+	insertIntegrTableSql := "INSERT " + sd.dBaseTo + " SELECT Id, Discriminator, Name," +
+		"BusinessUnit, ItemNumber, ItemName FROM " + sd.dBaseFrom + " WHERE BusinessUnit = 65"
 
 	cs := make(chan string) // channel of function sql-client. Канал функции sql-клиента
 	// структура DSN
